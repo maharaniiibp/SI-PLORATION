@@ -1,0 +1,161 @@
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+.halo {
+  color: #1e2a5e;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+.bghead {
+  background: #1e2a5e;
+}
+.h4 {
+  font-size: 15px;
+  font-family: monospace;
+  color: #e1d7b7;
+}
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+.marquee h1 {
+  display: inline-block;
+  padding-left: 20%;
+  animation: marquee 10s linear infinite;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+#ploration {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Menyembunyikan bagian gambar yang melampaui ukuran layar */
+}
+
+.ploimg {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Memastikan gambar memenuhi area dengan rasio aspek yang benar */
+  object-position: center; /* Memusatkan gambar */
+}
+
+.about-img {
+  border-radius: 0; /* Menghilangkan sudut melengkung pada gambar */
+  box-shadow: none; /* Menghilangkan bayangan pada gambar */
+}
+
+.custom-paragraph-size {
+  font-size: 17px;
+}
+
+/* Mengatur kolom untuk layar kecil */
+@media (max-width: 768px) {
+  .row .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .row {
+    margin: 0 !important; /* Mengurangi margin pada perangkat kecil */
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+/* Mengatur ukuran font dan margin untuk layar yang lebih kecil */
+@media (max-width: 576px) {
+  h5.font-weight-bold {
+    font-size: 1.25rem;
+  }
+  .textjob {
+    text-align: center;
+  }
+  .card-text {
+    font-size: 0.875rem;
+  }
+
+  .card {
+    padding: 0.5rem;
+  }
+}
+
+.card {
+  transition: transform 0.5s ease, box-shadow 0.5s ease,
+    background-color 0.5s ease;
+  background-color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-10px) rotate(3deg);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  background-color: #f8f9fa;
+}
+
+/* Efek hover khusus untuk perangkat dengan layar sentuh */
+@media (hover: none) {
+  .card:active {
+    transform: translateY(-10px) rotate(3deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    background-color: #f8f9fa;
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .row .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .row {
+    margin: 0 !important;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h5.font-weight-bold {
+    font-size: 1.25rem;
+  }
+
+  .card-text {
+    font-size: 0.875rem;
+  }
+
+  .card {
+    padding: 0.5rem;
+  }
+}
+
+.footer {
+  background: #1e2a5e;
+  color: #e1d7b7;
+}
